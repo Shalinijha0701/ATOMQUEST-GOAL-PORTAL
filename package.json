@@ -9,9 +9,8 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
-    "build": "npm run build --workspace=client && npm run check --workspace=server",
+    "build": "npm run build --workspace=client",
     "start": "npm run start --workspace=server",
-    "vercel-build": "npm run build --workspace=client",
     "check": "npm run check --workspace=server",
     "install:all": "npm install"
   },
