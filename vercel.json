@@ -3,8 +3,11 @@
   "installCommand": "npm install",
   "builds": [
     {
-      "src": "client/package.json",
-      "use": "@vercel/static-build"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "client/dist"
+      }
     },
     {
       "src": "api/[...slug].js",
