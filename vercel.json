@@ -5,6 +5,9 @@
   "outputDirectory": "client/dist",
   "routes": [
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "/api/[...slug].js"
     },
