@@ -1,10 +1,10 @@
 {
-  "version": 3,
+  "version": 2,
+  "installCommand": "npm install",
   "builds": [
     {
       "src": "client/package.json",
-      "use": "@vercel/static-build",
-      "config": {"distDir": "dist"}
+      "use": "@vercel/static-build"
     },
     {
       "src": "api/[...slug].js",
@@ -20,7 +20,7 @@
       "dest": "/api/[...slug].js"
     },
     {
-      "src": "/(.*)",
+      "src": "^/(.*)$",
       "dest": "/index.html"
     }
   ]
